@@ -12,8 +12,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.Toast;
-import com.google.firebase.Timestamp;
-
 
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -58,15 +56,15 @@ public class MainActivity extends AppCompatActivity {
                 .addOnSuccessListener(q -> Log.d(TAG, "✅ Firestore reachable, total docs: " + q.size()))
                 .addOnFailureListener(e -> Log.e(TAG, "❌ Firestore not reachable", e));
 
-        // ✅ Start the alert listener service only if admin is logged in
-        startAlertListenerService();
+        // ✅ Start the alert listener service with a current timestamp
+        startAlertListenerService(System.currentTimeMillis());
 
         // ✅ Setup Logout Button
         logoutButton = findViewById(R.id.logoutButton);
         logoutButton.setOnClickListener(v -> logoutAdmin());
     }
 
-    private void startAlertListenerService() {
+    private void startAlertListenerService(long startTime) {
         // Only start service if admin session is active
         if (!prefs.getBoolean("isLoggedIn", false)) {
             Log.w(TAG, "⚠️ Admin not logged in. AlertListenerService will not start.");
@@ -74,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         Intent serviceIntent = new Intent(this, AlertListenerService.class);
+        serviceIntent.putExtra("SERVICE_START_TIME", startTime); // ✅ Pass start timestamp
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             Log.d(TAG, "▶️ Starting foreground service (persistent)...");
