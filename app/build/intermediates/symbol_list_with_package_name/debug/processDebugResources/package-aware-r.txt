@@ -3567,6 +3567,8 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable baseline_alternate_email_24
+drawable bg_gradient
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -3700,6 +3702,8 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable sikadmin_logo
+drawable sikadminlogo
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3843,6 +3847,7 @@ id confirm_button
 id constraint
 id container
 id content
+id contentCard
 id contentPanel
 id contiguous
 id continuousVelocity
@@ -3893,6 +3898,7 @@ id edit_query
 id edit_text_id
 id elastic
 id emailEditText
+id emailInputLayout
 id embed
 id end
 id endToStart
@@ -3917,6 +3923,7 @@ id fixed
 id flip
 id floating
 id forever
+id forgotPasswordText
 id fragment_container_view_tag
 id frost
 id fullscreen_header
@@ -3929,6 +3936,7 @@ id group_divider
 id grouping
 id groups
 id header_title
+id helloText
 id hidden
 id hide_ime_id
 id hideable
@@ -3948,6 +3956,7 @@ id immediateStop
 id included
 id indeterminate
 id info
+id inputCard
 id invisible
 id inward
 id italic
@@ -3966,9 +3975,11 @@ id linear
 id listMode
 id list_item
 id loginButton
+id loginTitle
+id logoImageView
 id logoutButton
 id m3_side_sheet
-id main
+id mainLayout
 id marquee
 id masked
 id match_constraint
@@ -4045,6 +4056,7 @@ id noState
 id none
 id normal
 id north
+id notificationStatusText
 id notification_background
 id notification_main_column
 id notification_main_column_container
@@ -4078,6 +4090,7 @@ id parentPanel
 id parentRelative
 id parent_matrix
 id passwordEditText
+id passwordInputLayout
 id password_toggle
 id path
 id pathRelative
@@ -4200,6 +4213,7 @@ id titleDividerNoCustom
 id title_template
 id toggle
 id top
+id topAppBar
 id topPanel
 id top_center
 id touch_outside
@@ -4446,6 +4460,7 @@ layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+raw alert
 raw firebase_common_keep
 string abc_action_bar_home_description
 string abc_action_bar_up_description
